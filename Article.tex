@@ -107,11 +107,11 @@
 	\begin{figure}[th]
 		\label{Fig_diag}
 		\centering
-		\includegraphics[width=0.6\linewidth]{./figs/diag}
-			
-		\begin{small}
-		Figure \ref{Fig_diag}.1 - Block Diagram. Font: Elaborated by the authors.
-		\end{small}		
+		\includegraphics[width=0.8\linewidth]{./figs/diag}
+		\caption{Block diagram.}
+		\begin{footnotesize}
+		Font: Elaborated by the authors.
+		\end{footnotesize}
 	\end{figure}
 	
 	%O projeto foi dividido em três partes de desenvolvimento, sendo elas:
@@ -126,9 +126,7 @@
 	
 	In the control board there are three voltage converters of 3.3V, 5V and 12V, that are responsible for realize the supply these voltages to the output bus, where, also, is possible have the battery voltage. 
 	
-	In this same board is allocated a microcontroller that is powered independently, because of its dedicated converter.  However, if this converter shows any failure, the output bus can provide the 5V for keep the microcontroller working. Between the converters and the output bus, there are smart keys of low losses that make a comparative between the voltages from main converters with the backup converter and send one of them in the output. 
-	
-	The circuit of the backup converter was projected to provide a value slightly lower than the main converters, in this way the smart keys, by default, always enable the main converters.
+	In this same board is allocated a microcontroller that is powered independently, because of its dedicated converter.  However, if this converter shows any failure, the output bus can provide the 5V for keep the microcontroller working. Between the converters and the output bus, there are smart keys of low losses that make a comparative between the voltages from main converters with the backup converter and send one of them in the output. The circuit of the backup converter was projected to provide a value slightly lower than the main converters, in this way the smart keys, by default, always enable the main converters.
 	
 	Still on the control board, there is a microcontroller to realize the telemetry of the system and communicating via the CAN protocol, with the Data Processing Unit. In case of any failure with this microcontroller, the system keeps working, losing only the communication with the DPU and monitoring of sensors.
 	
@@ -141,32 +139,11 @@
 \label{Solar panel}
 
 	For the development of solar panel, had been used solar cells of triple-junction (GaInP/GaAS/Ge) of the model TrisolX Solar Wings, which has a efficiently approximately 28.0\%. As each one provides until 2.33V, was realized a arrangement with four solar cells in series, managing to provide a voltage of 9.32V, enough to make charging the Lithium-Ion battery of 7.4V. Were implemented, in parallel, six sets with four solar cells in series, totaling 24 solar cells on the solar panel. Bypass diodes were used to avoid damages and power losses system, due the differences of electrical characteristics from solar cells.\cite{TrisolX}
-	
-	\begin{figure}[th]
-		\label{cells}
-		\centering
-		\includegraphics[width=0.27\linewidth]{./figs/cells}
-			
-		\begin{small}
-		Figure \ref{cells} - Solar panel. Font: Picture taken by the authors.
-		\end{small}		
-	\end{figure}
-	
+		
 \subsection{Charger board}
 \label{Charger board}
 
 	In this board are allocated the charging battery system and the backup converter (LTC1941, one output boost and two bucks), that supply energy to output bus, in case it happens any failure in the main system. Besides having a analogic multiplex that performs the reads from temperature sensors of the solar cells according the panel desired by microcontroller.\cite{1941}
-
-	\begin{figure}[th]
-		\label{charger}
-		\centering
-		\includegraphics[width=0.3\linewidth]{./figs/charger}
-			
-		\begin{small}
-		Figure \ref{charger} - Charger board. Font: Elaborated by the authors.
-		\end{small}		
-	\end{figure}
-
 
 \subsection{Control board}
 \label{Control board}
@@ -174,15 +151,41 @@
 	The control board is responsible for three main converters (one LM3488 and two TPS563200), smart keys of low losses (LTC4412) and voltage and current sensors, besides the microcontroller (PIC18F66K80)  that performs all system monitoring.\cite{3488}\cite{563200}\cite{4412}\cite{18f}
 	
 	\begin{figure}[th]
+  	\centering
+  	  \begin{minipage}[b]{0.3\textwidth}
 		\label{control}
 		\centering
-		\includegraphics[width=0.4\linewidth]{./figs/control}
-			
-		\begin{small}
-		Figure \ref{control} - Control board, top vision. Font: Elaborated by the authors.
-		\end{small}		
+		\includegraphics[width=1\linewidth]{./figs/cells}
+	    \caption{Solar panel.}
+	    
+	    \begin{footnotesize}
+		Font: Picture taken by the authors.
+		\end{footnotesize}
+	  \end{minipage}
+	  \hfill
+	  \begin{minipage}[b]{0.3\textwidth}
+		\label{control}
+		\centering
+		\includegraphics[width=1\linewidth]{./figs/charger}
+	    \caption{Charger board.}
+	    
+	    \begin{footnotesize}
+		Font: Elaborated by the authors.
+		\end{footnotesize}
+	  \end{minipage}
+	  \hfill
+	  \begin{minipage}[b]{0.3\textwidth}
+		\label{charger}
+		\centering
+		\includegraphics[width=1\linewidth]{./figs/control}
+	    \caption{Control board, top vision.}
+	    
+	    \begin{footnotesize}
+		Font: Elaborated by the authors.
+		\end{footnotesize}
+	  \end{minipage}
 	\end{figure}
-
+	
 \section{Software development}
 \label{Software development}
 
@@ -191,11 +194,12 @@
 	\begin{figure}[th]
 		\label{flow}
 		\centering
-		\includegraphics[width=0.3\linewidth]{./figs/fluxo}
-			
-		\begin{small}
-		Figure \ref{flow}.1 - Software flowchart. Font: Elaborated by the authors.
-		\end{small}		
+		\includegraphics[width=0.4\linewidth]{./figs/fluxo2}
+		\caption{Software flowchart}
+		
+		\begin{footnotesize}
+		Font: Elaborated by the authors.
+		\end{footnotesize}
 	\end{figure}
 
 	The calibration of the system is done in seven steps: the microcontroller forces the smart key to provides the voltage from the main converter, reads the value and stores into memory, then the microcontroller forces the smart key to supply the voltage from the backup converter, reads the value and compares with the main converter if there is a small difference, if the condition is satisfied it stores the value and does the same cycle for the others voltages.
