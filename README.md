@@ -6,8 +6,10 @@ We are graduated in Electronic Engineer at Escola de Engenharia Mauá in São Ca
 
 This article is based on the Sistema de Gerenciamento de Energia para CubeSats (System Power Management for CubeSat) that was our graduated project, realized in 2015.
 
-further informations please contact us.
+Further informations please contact us.
 
 Arnaldo - arnaldoavianajr@gmail.com
+
 Otávio - otaviompetito@gmail.com
+
 Tiago - tiagoademay@gmail.com
