@@ -5,47 +5,12 @@
 \expandafter\ifx\csname href\endcsname\relax
   \def\href#1#2{#2} \def\path#1{#1}\fi
 
-\bibitem{Corsi}
-R.~C. FERR\~{A}O, Especifica\c{c}\~{a}o do produto CubeSat, NSEE-IMT, S\~{a}o
-  Caetano do Sul, 1st Edition (2014).
-
-\bibitem{TrisolX}
-TrisolX, Nova Iorque, TrisolX Solar Wings (2015).
-
-\bibitem{1941}
-Linear Technology,
-  \href{http://cds.linear.com/docs/en/datasheet/1941fb.pdf}{Low Loss PowerPath
-  Controller in ThinSOT} (2014).
-\newline\urlprefix\url{http://cds.linear.com/docs/en/datasheet/1941fb.pdf}
-
-\bibitem{3488}
-Texas Instruments,
-  \href{http://www.ti.com/lit/ds/snvs089n/snvs089n.pdf}{LM3488/-Q1
-  High-Efficiency, Low-Side, N-Channel Controller for Switching Regulators}
-  (2014).
-\newline\urlprefix\url{http://www.ti.com/lit/ds/snvs089n/snvs089n.pdf}
-
-\bibitem{563200}
-Texas Instruments,
-  \href{http://www.ti.com/lit/ds/symlink/tps563200.pdf}{Tps56x200 4.5 V To 17 V
-  Input, 2 A, 3 A Synchronous Step-Down Voltage Regulator In 6 Pin SOT-23}
-  (2014).
-\newline\urlprefix\url{http://www.ti.com/lit/ds/symlink/tps563200.pdf}
-
-\bibitem{4412}
-Linear Technology,
-  \href{http://cds.linear.com/docs/en/datasheet/4412fb.pdf}{Low Loss PowerPath
-  Controller in ThinSOT} (2014).
-\newline\urlprefix\url{http://cds.linear.com/docs/en/datasheet/4412fb.pdf}
-
-\bibitem{18f}
-Microchip,
-  \href{http://ww1.microchip.com/downloads/en/DeviceDoc/39977c.pdf}{PIC18F66K80
-  Family Data Sheet} (2014).
-\newline\urlprefix\url{http://ww1.microchip.com/downloads/en/DeviceDoc/39977c.pdf}
-
 \bibitem{CubeSat}
 A.~MEHRPARVAR, D.~PIGNATELLI, CubeSat Design Specification, Cal Poly,
   Calif\'{o}rnia, 13th Edition (2014).
+
+\bibitem{Corsi}
+R.~C. FERR\~{A}O, Especifica\c{c}\~{a}o do produto CubeSat, NSEE-IMT, S\~{a}o
+  Caetano do Sul, 1st Edition (2014).
 
 \end{thebibliography}
