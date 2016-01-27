@@ -157,7 +157,7 @@
 \subsection{\textbf{Solar panel}}
 \label{Solar panel}
 
-	For the development of solar panel, had been used solar cells of triple-junction of the model TrisolX Solar Wings, which has a efficiently approximately 28.0\%. Was realized a arrangement with four solar cells in series, managing to provide a voltage of 9.32V. Were implemented, in parallel, six sets, totaling 24 solar cells. Bypass diodes were used to avoid damages and power losses system.%\cite{TrisolX}
+	For the development of solar panel, had been used solar cells of triple-junction of the model TrisolX Solar Wings, which has a efficiently approximately 28.0\%. Was realized a arrangement with four solar cells in series, managing to provide a voltage of 9.32V. Were implemented, in parallel, six sets, totaling 24 solar cells. Bypass diodes were used to avoid damages and power losses system.\cite{TrisolX}
 		
 \subsection{\textbf{Charger board}}
 \label{Charger board}
@@ -185,7 +185,7 @@
 	  \begin{minipage}[b]{0.3\textwidth}
 		\label{control}
 		\centering
-		\includegraphics[width=0.6\linewidth]{./figs/charger}
+		\includegraphics[width=0.7\linewidth]{./figs/charger}
 	    \caption{Charger board.}
 	    
 	    \begin{footnotesize}
@@ -221,16 +221,12 @@
 		\end{footnotesize}
 	\end{figure}
 
-	The calibration of the system is done in seven steps: the microcontroller forces the smart key to provides the voltage from the main converter, reads the value and stores into memory, then the microcontroller forces the smart key to supply the voltage from the backup converter, reads the value and compares with the main converter if there is a small difference, if the condition is satisfied it stores the value and does the same cycle for the others voltages.
+	The calibration of the system is done in seven steps: the microcontroller forces the smart key to provides the voltage from the main converter, reads the value and stores into memory, then the microcontroller forces the smart key to supply the voltage from the backup converter, reads the value and compares with the main converter if there is a small difference, if the condition is satisfied it stores the value and does the same cycle for the others voltages. After that, the software gets in the main loop.
 
 \section{Conclusion}
 \label{Conclusion}
 
-	 The solution implemented for improve the lifespan of Electrical Power System, using a backup source shows itself quite effective, the switching between the main source and backup source, with the use of ideal keys, showed itself quite functional, because has low losses and do not causes disturbances in the payload during the switching, that keeps working normally. 
-	
-%	The way the system was implemented can become a didactical platform for study of power electronic in the aerospace area, respecting the specified norms from the Cal Poly.\cite{CubeSat} 
-
-	Redundancies worked as designed by the group, so, if the main converter decrease its voltage to the point of getting the low voltage provided by the backup converter, this takes its place and begins, immediately, to provide the energy in the output bus, without the load feel switching between sources. This occurs individually for each converter or, even to all together, and does not impair the power supply to the other subsystems of the CubeSat.
+	 The solution implemented for improve the lifespan of Electrical Power System, using a backup source shows itself quite effective, the switching between the main source and backup source, with the use of ideal keys, showed itself quite functional, because has low losses and do not causes disturbances in the payload during the switching, that keeps working normally. Redundancies worked as designed by the group, so, if the main converter decrease its voltage to the point of getting the low voltage provided by the backup converter, this takes its place and begins, immediately, to provide the energy in the output bus, without the load feel switching between sources. This occurs individually for each converter or, even to all together, and does not impair the power supply to the other subsystems of the CubeSat.
 
 %Os tópicos que se destacaram no desenvolvimento do projeto foram:
 	
